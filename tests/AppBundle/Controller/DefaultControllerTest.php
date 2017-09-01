@@ -2,18 +2,23 @@
 
 namespace Tests\AppBundle\Controller;
 
+use PHPUnit\Framework\TestCase;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use AppBundle\Controller\DefaultController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
-class DefaultControllerTest extends WebTestCase
+class DefaultControllerTest extends TestCase
 {
+
+
     public function testIndexIsLive()
     {
-        $client = static::createClient();
+        $m = $this->createMock('AppBundle\Controller\DefaultController');
+        $m->method('respond');
 
-        $crawler = $client->request('GET', '/');
 
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
-        //$this->assertContains('Welcome to Symfony', $crawler->filter('#container h1')->text());
+        self::assertEquals(, $t);
+        //$this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 }

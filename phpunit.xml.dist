@@ -6,7 +6,6 @@
          backupGlobals="false"
          colors="true"
          bootstrap="vendor/autoload.php"
-         beStrictAboutTestsThatDoNotTestAnything="true"
 >
     <php>
         <ini name="error_reporting" value="-1" />
@@ -14,7 +13,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="Project Test Suite">
+        <testsuite name="Mercari Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

@@ -15,7 +15,12 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return $this->respond([]);
+        $data = [
+            'id' => 'b001',
+            'url' => 'https://mercari.com/lp/b001.html'
+        ];
+
+        return $this->respond($data);
     }
 
     public function respond($data = null)
